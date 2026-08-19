@@ -1,0 +1,1 @@
+'use client'; export default function ErrorPage({reset}:{error:Error&{digest?:string};reset:()=>void}){return <main style={{padding:40,fontFamily:'Arial'}}><h1>WinsWi</h1><p>Une erreur est survenue.</p><button onClick={()=>reset()}>Réessayer</button></main>}

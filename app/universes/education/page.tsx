@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Edu(){return <main className="wrap"><section className="hero"><div className="eyebrow">🎓 EDUWIN</div><h1>Apprendre, enseigner, progresser.</h1><p>Cours, tutorat, formations, certifications, orientation et ressources pédagogiques, avec recherche par niveau, matière, mode et localisation.</p><div className="actions"><Link className="btn" href="/universes/education">Explorer EduWin</Link><Link className="btn secondary" href="/publier/education">Publier une offre</Link></div></section></main>}
