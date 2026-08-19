@@ -1,7 +1,20 @@
-﻿import { defineConfig, globalIgnores } from 'eslint/config';
-import nextVitals from 'eslint-config-next/core-web-vitals.js';
+﻿import { defineConfig, globalIgnores } from "eslint/config";
+import nextPlugin from "@next/eslint-plugin-next";
 
 export default defineConfig([
-  nextVitals,
-  globalIgnores(['.next/**', 'node_modules/**'])
+  {
+    plugins: {
+      "@next/next": nextPlugin
+    },
+    rules: {
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs["core-web-vitals"].rules
+    }
+  },
+  globalIgnores([
+    ".next/**",
+    "node_modules/**",
+    "out/**",
+    "coverage/**"
+  ])
 ]);
